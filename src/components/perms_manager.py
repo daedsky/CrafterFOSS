@@ -25,10 +25,10 @@ class StoragePermsManager:
             if after_dialog_close_func is not None:
                 after_dialog_close_func()
             return
-        if self.page.client_storage.get(AppInfo.STORAGE_PERMS_DENIED) is True:
-            if after_dialog_close_func is not None:
-                after_dialog_close_func()
-            return
+        # if self.page.client_storage.get(AppInfo.STORAGE_PERMS_DENIED) is True:
+        #     if after_dialog_close_func is not None:
+        #         after_dialog_close_func()
+        #     return
         status = self.perms_handler.check_permission(self.PermTypeStorage)
 
         if status == fph.PermissionStatus.GRANTED:
