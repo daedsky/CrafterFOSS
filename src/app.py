@@ -41,13 +41,14 @@ class CrafterApp:
 
         disclaimer_text = ft.Text(
             spans=[
-                ft.TextSpan('''This app is provided "as-is" without any warranties or guarantees. 
-The developer is not responsible for any damage to your device or data that may occur from using this app. 
-By continuing to use this app, you acknowledge and accept this disclaimer.
-This app is open-source and licensed under the MIT License. 
-You can view the source code and license details at '''),
-                ft.TextSpan('git repo', style=ft.TextStyle(decoration=ft.TextDecoration.UNDERLINE),
-                            url=AppInfo.GIT_REPO_URL)
+                ft.TextSpan('This app is provided "as-is" without any warranties or guarantees. '),
+                ft.TextSpan('The developer is not responsible for any damage to your device or data that may occur from using this app. '),
+                ft.TextSpan('By continuing to use this app, you acknowledge and accept this disclaimer. '),
+                ft.TextSpan('This app is open-source and licensed under the '),
+                ft.TextSpan('MIT License', url=AppInfo.APP_LICENSE_URL, style=ft.TextStyle(color=ft.Colors.BLUE)),
+                ft.TextSpan('. You can view the source code '),
+                ft.TextSpan('Here', style=ft.TextStyle(color=ft.Colors.BLUE), url=AppInfo.GIT_REPO_URL),
+                ft.TextSpan('.')
             ])
 
         dialog = InfoAlertDialog(self.page, content_text='', title_text='Disclaimer')
