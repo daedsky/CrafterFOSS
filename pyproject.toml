@@ -1,6 +1,6 @@
 [project]
 name = "Crafter FOSS"
-version = "0.0.3"
+version = "0.0.4-beta"
 description = "Craft BootAnimations for Android devices (FOSS)."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -15,7 +15,7 @@ dependencies = [
 # org name in reverse domain name notation, e.g. "com.mycompany".
 # Combined with project.name to build bundle ID for iOS and Android apps
 org = "io.crafter"
-build_number = 3
+build_number = 4
 compile.app = true # --compile-app
 compile.packages = true # --compile-packages
 compile.cleanup = true # --cleanup-on-compile

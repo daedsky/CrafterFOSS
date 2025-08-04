@@ -2,7 +2,7 @@ from enum import StrEnum
 
 
 class AppInfo(StrEnum):
-    VERSION = '0.0.3'
+    VERSION = '0.0.4-beta'
     THEME_MODE_KEY = 'io.crafter.CrafterFOSS.ThemeMode'
     THEME_COLOR_KEY = 'io.crafter.CrafterFOSS.ThemeColor'
     LICENSE_AGREED_KEY = 'io.crafter.CrafterFOSS.LICENSE_AGREED'
