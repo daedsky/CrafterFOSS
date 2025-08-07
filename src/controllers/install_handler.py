@@ -50,6 +50,9 @@ def __su_binary_exists(page: ft.Page) -> bool:
     except FileNotFoundError:
         cc.ErrorAlertDialog(page=page, content='su binary not found. Aborting...').show()
         return False
+    except PermissionError as pe:
+        cc.ErrorAlertDialog(page=page, content=str(pe)).show()
+        return False
 
 
 def __start_installing(install_layout: 'InstallLayout', install_location_fp: str) -> None:
