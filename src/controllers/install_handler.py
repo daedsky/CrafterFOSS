@@ -106,11 +106,10 @@ def install(install_layout: 'InstallLayout') -> None:
 
 
 def on_click_proceed(install_layout: 'InstallLayout') -> None:
-    if not __su_binary_exists(page=install_layout.page):
-        return
-
-    elif install_layout.picked_zip_file_fp is None:
+    if install_layout.picked_zip_file_fp is None:
         cc.ErrorAlertDialog(page=install_layout.page, content='Please select a bootanimation.zip file').show()
+        return
+    if not __su_binary_exists(page=install_layout.page):
         return
 
     install_location_fp: str | None = __get_installation_location_fp_if_exists(install_layout)
