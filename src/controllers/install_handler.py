@@ -102,6 +102,10 @@ def __start_installing(install_layout: 'InstallLayout', install_location_fp: str
 
 
 def install(install_layout: 'InstallLayout') -> None:
+    show_disclaimer_and_proceed(install_layout)
+
+
+def on_click_proceed(install_layout: 'InstallLayout') -> None:
     if not __su_binary_exists(page=install_layout.page):
         return
 
@@ -116,3 +120,17 @@ def install(install_layout: 'InstallLayout') -> None:
 
     install_layout.btn_install.disabled = True
     install_layout.btn_install.update()
+
+
+def show_disclaimer_and_proceed(install_layout: 'InstallLayout') -> None:
+    dlg = cc.InfoAlertDialog(page=install_layout.page,
+                             content_text='Make sure your Android OS/ROM supports installing "bootanimation.zip" before proceeding otherwise it may BRICK your device.',
+                             title_text='Disclaimer')
+
+    def dlg_close_and_proceed():
+        install_layout.page.close(dlg)
+        on_click_proceed(install_layout)
+
+    dlg.actions = [ft.TextButton('Cancel', on_click=lambda _: install_layout.page.close(dlg)),
+                   ft.TextButton('Proceed', on_click=lambda _: dlg_close_and_proceed())]
+    dlg.show()
