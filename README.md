@@ -32,13 +32,13 @@ See [LICENSE](./LICENSE) for details.
 This app uses the following open-source libraries and SDKs.
 
 - Flet framework  
-  • License: Apache License 2.0  
-  • Full text: https://www.apache.org/licenses/LICENSE-2.0.txt
+  • License: [Apache License 2.0](https://github.com/flet-dev/flet/blob/main/LICENSE)
+
+- Flet Permission Handler  
+  • License: [Apache License 2.0](https://github.com/flet-dev/flet-permission-handler/blob/main/LICENSE)
 
 - Pillow (PIL fork)  
-  • License: BSD-style (HPND)  
-  • Full text: https://github.com/python-pillow/Pillow/blob/master/LICENSE
+  • License: [BSD-style (HPND)](https://github.com/python-pillow/Pillow/blob/master/LICENSE)
 
 - Pyjnius  
-  • License: MIT License  
-  • Full text: https://github.com/kivy/pyjnius/blob/master/LICENSE  
+  • License: [MIT License](https://github.com/kivy/pyjnius/blob/master/LICENSE)
