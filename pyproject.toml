@@ -1,6 +1,6 @@
 [project]
 name = "Crafter FOSS"
-version = "0.0.5"
+version = "0.0.6"
 description = "Craft BootAnimations for Android devices (FOSS)."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -15,7 +15,7 @@ dependencies = [
 # org name in reverse domain name notation, e.g. "com.mycompany".
 # Combined with project.name to build bundle ID for iOS and Android apps
 org = "io.crafter"
-build_number = 5
+build_number = 6
 compile.app = true # --compile-app
 compile.packages = true # --compile-packages
 compile.cleanup = true # --cleanup-on-compile
@@ -34,7 +34,7 @@ copyright = "Copyright (C) 2025 by daedsky"
 path = "src"
 
 [tool.flet.android]
-split_per_abi = true
+#split_per_abi = true
 min_sdk_version = 30
 target_sdk_version = 34
 
